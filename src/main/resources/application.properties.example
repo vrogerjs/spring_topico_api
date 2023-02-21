@@ -3,3 +3,4 @@ spring.datasource.username =
 spring.datasource.password =
 CLIENT_ID_OAUTH=
 CLIENT_SECRET_OAUTH=
+SERVER.PORT=

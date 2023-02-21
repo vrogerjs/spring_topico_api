@@ -27,7 +27,7 @@ public class PsicologicaServiceImpl extends CRUDImpl<Psicologica, Integer> imple
     }
 
     @Override
-    public Page<Psicologica> findAllPaginationByIdHistoriaclinica(Integer IdHistoriaclinica, Pageable page) {
-        return repo.searchByIdHistoriaclinica(IdHistoriaclinica, page);
+    public Page<Psicologica> findAllPaginationByIdHistoriaclinica(Pageable page, Integer IdHistoriaclinica) {
+        return repo.searchByIdHistoriaclinica(page, IdHistoriaclinica);
     }
 }

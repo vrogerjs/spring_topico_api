@@ -27,7 +27,7 @@ public class AtencionServiceImpl extends CRUDImpl<Atencion, Integer> implements 
     }
 
     @Override
-    public Page<Atencion> findAllPaginationByIdHistoriaclinica(Integer IdHistoriaclinica, Pageable page) {
-        return repo.searchByIdHistoriaclinica(IdHistoriaclinica, page);
+    public Page<Atencion> findAllPaginationByIdHistoriaclinica(Pageable page, Integer IdHistoriaclinica) {
+        return repo.searchByIdHistoriaclinica(page, IdHistoriaclinica);
     }
 }

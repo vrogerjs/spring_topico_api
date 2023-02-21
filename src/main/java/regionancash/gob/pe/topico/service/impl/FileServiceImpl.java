@@ -29,7 +29,7 @@ public class FileServiceImpl extends CRUDImpl<File, Integer> implements IFileSer
     }
 
     @Override
-    public Page<File> findAllPaginationByIdHistoriaclinica(Integer IdHistoriaclinica, Pageable page) {
-        return repo.searchByIdHistoriaclinica(IdHistoriaclinica, page);
+    public Page<File> findAllPaginationByIdHistoriaclinica(Pageable page, Integer IdHistoriaclinica) {
+        return repo.searchByIdHistoriaclinica(page, IdHistoriaclinica);
     }
 }

@@ -9,6 +9,6 @@ import regionancash.gob.pe.topico.model.File;
 public interface IFileService extends ICRUD<File, Integer>{
     Page<File> findAllPagination(Pageable page);
 
-    Page<File> findAllPaginationByIdHistoriaclinica(Integer IdHistoriaclinica, Pageable page);
+    Page<File> findAllPaginationByIdHistoriaclinica(Pageable page, Integer IdHistoriaclinica);
 
 }

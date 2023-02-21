@@ -2,11 +2,14 @@ package regionancash.gob.pe.topico.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import regionancash.gob.pe.topico.model.Atencion;
+import regionancash.gob.pe.topico.model.Historiaclinica;
 import regionancash.gob.pe.topico.service.IAtencionService;
 
 import java.util.List;
@@ -34,11 +37,11 @@ public class AtencionController {
         return new ResponseEntity<>(p, HttpStatus.OK);
     }
 
-    @GetMapping("/pagination/{id}")
-    public ResponseEntity<Page<Atencion>> findAllPaginationByIdHistoriaclinica(@PathVariable("id") Integer IdHistoriaclinica, Pageable page) {
-//        Sort sort = Sort.by(new Sort.Order(Sort.Direction.DESC, "id"));
-//        var page = PageRequest.of(page, sort);
-        Page<Atencion> p = service.findAllPaginationByIdHistoriaclinica(IdHistoriaclinica,page);
+    @GetMapping("/{from}/{to}/{id}")
+    public ResponseEntity<Page<Atencion>> findAllPagination(@PathVariable(value = "from") int from, @PathVariable(value = "to") int to, @PathVariable("id") Integer IdHistoriaclinica) {
+        Sort sort = Sort.by(new Sort.Order(Sort.Direction.DESC, "fechaEvaluacion"));
+        var pageable = PageRequest.of(from, to, sort);
+        Page<Atencion> p = service.findAllPaginationByIdHistoriaclinica(pageable, IdHistoriaclinica);
         return new ResponseEntity<>(p, HttpStatus.OK);
     }
 

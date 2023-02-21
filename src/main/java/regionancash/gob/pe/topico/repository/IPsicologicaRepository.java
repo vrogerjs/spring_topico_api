@@ -8,5 +8,5 @@ import regionancash.gob.pe.topico.model.Psicologica;
 
 public interface IPsicologicaRepository extends IGenericRepo<Psicologica, Integer> {
     @Query("SELECT p FROM Psicologica p WHERE p.historiaclinica.id = :id")
-    Page<Psicologica> searchByIdHistoriaclinica(@Param("id") Integer IdHistoriaclinica, Pageable page);
+    Page<Psicologica> searchByIdHistoriaclinica(Pageable page, @Param("id") Integer IdHistoriaclinica);
 }

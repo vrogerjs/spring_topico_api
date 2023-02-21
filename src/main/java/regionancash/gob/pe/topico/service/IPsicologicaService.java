@@ -8,6 +8,6 @@ import regionancash.gob.pe.topico.model.Psicologica;
 public interface IPsicologicaService extends ICRUD<Psicologica, Integer> {
     Page<Psicologica> findAllPagination(Pageable page);
 
-    Page<Psicologica> findAllPaginationByIdHistoriaclinica(Integer IdHistoriaclinica, Pageable page);
+    Page<Psicologica> findAllPaginationByIdHistoriaclinica(Pageable page, Integer IdHistoriaclinica);
 
 }

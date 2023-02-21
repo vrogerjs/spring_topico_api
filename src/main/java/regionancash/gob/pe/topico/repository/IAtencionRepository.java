@@ -8,5 +8,5 @@ import regionancash.gob.pe.topico.model.Atencion;
 
 public interface IAtencionRepository extends IGenericRepo<Atencion, Integer> {
     @Query("SELECT a FROM Atencion a WHERE a.historiaclinica.id = :id")
-    Page<Atencion> searchByIdHistoriaclinica(@Param("id") Integer IdHistoriaclinica, Pageable page);
+    Page<Atencion> searchByIdHistoriaclinica(Pageable page, @Param("id") Integer IdHistoriaclinica);
 }

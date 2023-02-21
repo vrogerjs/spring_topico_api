@@ -8,5 +8,5 @@ import regionancash.gob.pe.topico.model.File;
 
 public interface IFileRepository extends IGenericRepo<File, Integer>{
     @Query("SELECT f FROM File f WHERE f.historiaclinica.id = :id")
-    Page<File> searchByIdHistoriaclinica(@Param("id") Integer IdHistoriaclinica, Pageable page);
+    Page<File> searchByIdHistoriaclinica(Pageable page, @Param("id") Integer IdHistoriaclinica);
 }

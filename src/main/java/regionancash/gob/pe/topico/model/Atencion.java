@@ -20,49 +20,49 @@ public class Atencion {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Column(columnDefinition = "decimal(5,2)", nullable = false)
+    @Column(columnDefinition = "decimal(5,2)")
     private Double peso;
 
-    @Column(columnDefinition = "decimal(5,2)", nullable = false)
+    @Column(columnDefinition = "decimal(5,2)")
     private Double imc;
 
-    @Column(length =8, nullable = false)
+    @Column(length = 32)
     private String frecuenciaCardiaca;
 
-    @Column(length =8, nullable = false)
+    @Column(length = 32)
     private String frecuenciaRespiratoria;
 
-    @Column(columnDefinition = "decimal(5,2)", nullable = false)
+    @Column(columnDefinition = "decimal(5,2)")
     private Double talla;
 
-    @Column(length =8, nullable = false)
+    @Column(length = 32)
     private String temperatura;
 
-    @Column(length =16, nullable = false)
+    @Column(length =32)
     private String presion;
 
-    @Column(length =16, nullable = false)
+    @Column(length =32)
     private String saturacion;
 
     @Column(nullable = false)
     private LocalDate fechaEvaluacion;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String anamnesis;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String evolucionMedica;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String ordenMedica;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String notaEnfermeria;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String examenComplementario;
 
-    @Column(columnDefinition = "TEXT", nullable = false)
+    @Column(columnDefinition = "TEXT")
     private String interConsulta;
 
     @Column(nullable = false, length = 1)

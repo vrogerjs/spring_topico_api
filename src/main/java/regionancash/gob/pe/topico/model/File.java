@@ -36,8 +36,8 @@ public class File {
     private Integer borrado=0;
 
     @ManyToOne
-    @JoinColumn(name="historiaclinica_id", nullable=false)
-    private Historiaclinica historiaclinica;
+    @JoinColumn(name="atencion_id", nullable=false)
+    private Atencion atencion;
 
     @CreationTimestamp
     @Temporal(TemporalType.TIMESTAMP)

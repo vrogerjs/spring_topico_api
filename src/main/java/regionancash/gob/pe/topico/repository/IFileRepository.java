@@ -7,6 +7,6 @@ import org.springframework.data.repository.query.Param;
 import regionancash.gob.pe.topico.model.File;
 
 public interface IFileRepository extends IGenericRepo<File, Integer>{
-    @Query("SELECT f FROM File f WHERE f.historiaclinica.id = :id")
-    Page<File> searchByIdHistoriaclinica(Pageable page, @Param("id") Integer IdHistoriaclinica);
+    @Query("SELECT f FROM File f WHERE f.atencion.id = :id")
+    Page<File> searchByIdAtencion(Pageable page, @Param("id") Integer IdAtencion);
 }

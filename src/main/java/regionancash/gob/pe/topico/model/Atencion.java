@@ -1,5 +1,6 @@
 package regionancash.gob.pe.topico.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -9,6 +10,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import java.time.LocalDate;
 import java.util.Date;
+import java.util.Set;
 
 @Getter
 @Setter
@@ -58,9 +60,6 @@ public class Atencion {
 
     @Column(columnDefinition = "TEXT")
     private String notaEnfermeria;
-
-    @Column(columnDefinition = "TEXT")
-    private String examenComplementario;
 
     @Column(columnDefinition = "TEXT")
     private String interConsulta;

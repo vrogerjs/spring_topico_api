@@ -32,10 +32,10 @@ public class FileController {
         return new ResponseEntity<>(p, HttpStatus.OK);
     }
     @GetMapping("/{from}/{to}/{id}")
-    public ResponseEntity<Page<File>> findAllPagination(@PathVariable(value = "from") int from, @PathVariable(value = "to") int to, @PathVariable("id") Integer IdHistoriaclinica) {
+    public ResponseEntity<Page<File>> findAllPagination(@PathVariable(value = "from") int from, @PathVariable(value = "to") int to, @PathVariable("id") Integer IdAtencion) {
         Sort sort = Sort.by(new Sort.Order(Sort.Direction.DESC, "fechaRegistro"));
         var pageable = PageRequest.of(from, to, sort);
-        Page<File> p = service.findAllPaginationByIdHistoriaclinica(pageable, IdHistoriaclinica);
+        Page<File> p = service.findAllPaginationByIdAtencion(pageable, IdAtencion);
         return new ResponseEntity<>(p, HttpStatus.OK);
     }
 

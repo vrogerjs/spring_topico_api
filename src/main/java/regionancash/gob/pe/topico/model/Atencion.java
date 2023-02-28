@@ -64,6 +64,75 @@ public class Atencion {
     @Column(columnDefinition = "TEXT")
     private String interConsulta;
 
+    @Column(length =32)
+    private String edadGestacion;
+
+    @Column(length =32)
+    private String pulsoMaterno;
+
+    @Column(length =32)
+    private String alturaUterina;
+
+    @Column(length =32)
+    private String situacion;
+
+    @Column(length =32)
+    private String presentacion;
+
+    @Column(length =32)
+    private String posicion;
+
+    @Column(length =32)
+    private String fcf;
+
+    @Column(length =32)
+    private String movimientoFetal;
+
+    @Column(length =32)
+    private String cualitativa;
+
+    @Column(length =32)
+    private String edema;
+
+    @Column(length =32)
+    private String reflejo;
+
+    @Column(length =32)
+    private String examenPezon;
+
+    @Column(length =32)
+    private String indicadorFierro;
+
+    @Column(length =32)
+    private String indicadorCalcio;
+
+    @Column(length =32)
+    private String indicadorAcido;
+
+    @Column(length =32)
+    private String ecoControl;
+
+    @Column(length =32)
+    private String perfilBiofisico;
+
+    @Column(length =32)
+    private String cita;
+
+    @Column(length =32)
+    private String visitaDomiciliaria;
+
+    @Column(length =32)
+    private String planParto;
+
+    @Column(length =32)
+    private String lugarAtencion;
+
+    @Column(length =32)
+    private String responsableAtencion;
+
+    @Column(length =32)
+    private String numeroSis;
+
     @Column(nullable = false, length = 1)
     private Integer activo=1;
 

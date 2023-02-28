@@ -45,6 +45,23 @@ public class PacienteController {
         return new ResponseEntity<>(p, HttpStatus.OK);
     }
 
+    @GetMapping("/reporte/modalidadcontrato/{modalidadContrato}")
+    public ResponseEntity<List<Paciente>> findAllByModalidadContrato(@PathVariable("modalidadContrato") String modalidadContrato) {
+        List<Paciente> p = service.searchByModalidadContrato(modalidadContrato);
+        return new ResponseEntity<>(p, HttpStatus.OK);
+    }
+
+    @GetMapping("/modalidadcontrato")
+    public List<String> findAllModalidadContrato() throws Exception {
+        return service.findAllModalidadContrato();
+    }
+
+    @GetMapping("/reporte/edad/{edadIni}/{edadFin}")
+    public ResponseEntity<List<Paciente>> ListAllByEdad(@PathVariable("edadIni") Integer edadIni, @PathVariable("edadFin") Integer edadFin) {
+        List<Paciente> p = service.ListAllByEdad(edadIni, edadFin);
+        return new ResponseEntity<>(p, HttpStatus.OK);
+    }
+
     @PostMapping
     public Paciente create(@RequestBody Paciente paciente) throws Exception {
         return service.create(paciente);

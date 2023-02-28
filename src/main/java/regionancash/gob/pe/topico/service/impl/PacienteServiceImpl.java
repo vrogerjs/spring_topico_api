@@ -11,6 +11,8 @@ import regionancash.gob.pe.topico.repository.IHistoriaclinicaRepository;
 import regionancash.gob.pe.topico.repository.IPacienteRepository;
 import regionancash.gob.pe.topico.service.IPacienteService;
 
+import java.util.List;
+
 @Service
 public class PacienteServiceImpl extends CRUDImpl<Paciente, Integer> implements IPacienteService {
     @Autowired
@@ -30,4 +32,20 @@ public class PacienteServiceImpl extends CRUDImpl<Paciente, Integer> implements 
     public Page<Paciente> searchByParams(String search, Pageable page) {
         return repo.searchByParams(search, page);
     }
+
+    @Override
+    public List<Paciente> searchByModalidadContrato(String modalidadContrato) {
+        return repo.searchByModalidadContrato(modalidadContrato);
+    }
+
+    @Override
+    public List<String> findAllModalidadContrato() {
+        return repo.ListByModalidadContrato();
+    }
+
+    @Override
+    public List<Paciente> ListAllByEdad(Integer edadIni, Integer edadFin) {
+        return repo.ListAllByEdad(edadIni, edadFin);
+    }
+
 }

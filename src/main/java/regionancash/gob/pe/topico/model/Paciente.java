@@ -34,6 +34,15 @@ public class Paciente {
     @Column(length =16, nullable = false)
     private String genero;
 
+    @Column(length =64, nullable = false)
+    private String estadoCivil;
+
+    @Column(length =64, nullable = false)
+    private String condicion;
+
+    @Column(length =1024, nullable = false)
+    private String cargo;
+
     @Column(nullable = false)
     private LocalDate fechaNacimiento;
 
